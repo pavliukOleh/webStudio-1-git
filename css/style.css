@@ -1,15 +1,18 @@
 /*Обнуление*/
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-*,
-*:before,
-*:after {
+html{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 :focus,
 :active {
@@ -77,27 +80,398 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
-/*--------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap");
-body {
-  font: 16px/28px "Be Vietnam Pro", Arial, Helvetica, sans-serif;
-  width: 1600px;
+/*------------------------------------------------------------------------------------*/
+:root{
+  --primary-hover_focus-color:#2196F3;
 }
-.logo-span{
+h1{
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+h2{
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  width: 1600px;
+  margin: auto;
+}
+/* .container{
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+/*header*/
+.header__block{
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.header__navigation{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 50px;
+}
+.header__mailTel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+  margin-right: 215px;
+}
+.header_logo{
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin: auto;
+  margin-right: 85px;
+  margin-left: 215px;
+}
+.header_logo-span{
   color: #2196F3;
 }
-.container{
+.navigation_btn{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+.navigation_btn:hover,
+.navigation_btn:focus{
+  color: var(--primary-hover_focus-color);
+}
+.header_contacts{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.header_contacts:hover,
+.header_contacts:focus{
+  color: var(--primary-hover_focus-color);
+}
+/*header*/
+
+/*main_page*/
+/*hero_page*/
+.hero__bgr{
   background:url(/img/Header\ imghero_bg.png);
 }
 .hero-block{
   width: 1600px;
   height: 600px;
   background:rgba(44, 45, 56, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.OurComand{
+.hero_title{
+  width: 696px;
+  height: 120px;
+  padding-top: 10px;
+}
+.hero_btn{
+  width: 200px;
+  height: 50px;
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color:#FFFFFF;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  margin-top: 30px;
+}
+/*end hero_page*/
+/*advantages_page*/
+.advantages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.advantages__block{
+  width: 270px;
+  height: 251px;
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+.advantages__img-bg{
+  width: 270px;
+  height: 120px;
+  background: #F5F4FA;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.advantages__img{
+  margin: 0;
+}
+.advantages__tittle{
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+}
+.advantages__description{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*end advantages_page*/
+/*whatWeDo_page*/
+.whatWeDo__container-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  margin-bottom: 94px;
+}
+.whatWeDo__tittle{
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+.whatWeDo__container{
+  position: relative;
+
+}
+.whatWeDo__gray-Block{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.whatWeDo__description{
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+}
+/*End whatWeDo_page*/
+/*whatWeDo_page*/
+.ourComand{
   background: #F5F4FA;
 }
+.ourTeam__tittle{
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+/*End whatWeDo_page*/
+/* ourTeam_page*/
+.ourComand__block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+.ourComand__member{
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+              0px 1px 1px rgba(0, 0, 0, 0.14), 
+              0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  margin-bottom: 94px;
+}
+.ourComand__member-tittle{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-top: 30px;
+}
+.ourComand__member-description{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-top: 10px;
+}
+.ourComand__member-socialMedia{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  padding-bottom: 35px;
+  padding-top: 28px;
+}
+/*End ourTeam_page*/
+
+/*ourClients_page*/
+.Clients__tittle{
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.Clients__company-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  padding-bottom: 120px;
+}
+.Client__logo-border{
+  width: 170px;
+  height: 90px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*End ourClients_page*/
+/*end main_page*/
+
+/*portfolio_page*/
+.portfolio__btn-filter{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+.portfolio__btn{
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background: #F5F4FA;
+  border-radius: 4px;
+}
+.portfolio__container{
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio__flex--container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 95px;
+}
+.portfolio__item{
+  width: 370px;
+  height: 404px;
+  border: solid 1px #EEEEEE;
+}
+.portfolio__tDescr-block{
+  margin: 20px 24px 20px 24px;
+}
+.portfolio__tittle{
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+.portfolio__description{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.portfolio__text-hover{
+  display: none;
+}
+/*end portfolio_page*/
+
+/*footer*/
 footer{
+  height: 252px;
   background-color: #2F303A;
   display: flex;
 }
+.footer__address{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+.footer__info{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: auto;
+}
+/*end footer*/
